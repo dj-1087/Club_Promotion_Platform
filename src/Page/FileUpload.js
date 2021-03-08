@@ -18,19 +18,13 @@ const FileUpload = ({ clubObj }) => {
         recruitment: lines,
       });
     } else if (field === "introduction") {
-      const state = await dbService
-        .collection("departments")
-        .doc(clubName)
-        .update({
-          introduction: lines,
-        });
+      const state = await dbService.collection("clubs").doc(clubName).update({
+        introduction: lines,
+      });
     } else {
-      const state = await dbService
-        .collection("departments")
-        .doc(clubName)
-        .update({
-          information_m: lines,
-        });
+      const state = await dbService.collection("clubs").doc(clubName).update({
+        information_m: lines,
+      });
     }
   };
   const handleUpload = async () => {

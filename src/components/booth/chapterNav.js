@@ -38,6 +38,7 @@ import TIME from "../../img/icon/TIME.svg";
 import 대건안드레아 from "../../img/icon/대건안드레아.svg";
 import 스카우트 from "../../img/icon/스카우트.svg";
 import FC명지 from "../../img/icon/FC명지.svg";
+import MIRS from "../../img/icon/MIRS.svg";
 
 const Chapternav = () => {
   const { departmentObj } = useContext(PortfolioContext);
@@ -79,6 +80,7 @@ const Chapternav = () => {
     대건안드레아: 대건안드레아,
     스카우트: 스카우트,
     FC명지: FC명지,
+    MIRS: MIRS,
   };
   useEffect(() => {
     function isTouch() {
