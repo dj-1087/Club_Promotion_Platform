@@ -39,6 +39,7 @@ export default function AddressForm({ idx = 0 }) {
   const checkAnswer = (e) => {
     const ans = document.getElementById("answer");
     const btn = document.getElementById("submitAnser");
+    const num = document.getElementsByClassName("passnumber");
     if (ans.value == quiz[idx].answer) {
       ans.readOnly = true;
       ans.parentElement.style.backgroundColor = " rgba(0, 0, 0, 0.09)";
@@ -50,6 +51,11 @@ export default function AddressForm({ idx = 0 }) {
       setLocalAns(JSON.parse(localStorage.getItem("quizAnswer")));
       ans.value = localAns[idx];
       setHelptext("통과~!");
+      console.log("p");
+      // for (let i = 0; i <= idx; i++) {
+        // console.log(i);
+        num[idx].innerHTML = quiz[idx].num;
+      // }
     } else {
       setHelptext("정답이 아닙니다!");
     }
@@ -70,12 +76,17 @@ export default function AddressForm({ idx = 0 }) {
     } else {
       const ans = document.getElementById("answer");
       const btn = document.getElementById("submitAnser");
+      const num = document.getElementsByClassName("passnumber");
       ans.readOnly = false;
       ans.value = "";
       ans.parentElement.style.backgroundColor = "white";
       btn.style.backgroundColor = "#3f51b5";
       btn.firstChild.innerText = "입력";
       setHelptext("");
+      for (let i = 0; i < idx; i++) {
+        console.log(i);
+        num[i].innerHTML = quiz[i].num;
+      }
     }
   }, [idx]);
   return quiz[idx].show ? (

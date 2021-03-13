@@ -14,7 +14,6 @@
   @include respond(phone) {
     width: 90vw;
     padding: 0;
-
   }
 }
 
@@ -60,11 +59,9 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-      
 
       @include respond(phone) {
         align-items: center;
-        
       }
 
       &-text {
@@ -142,11 +139,9 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-      
 
       @include respond(phone) {
         align-items: center;
-        
       }
 
       &-text {
@@ -187,7 +182,6 @@
   height: 100%;
 }
 
-
 #projects.chongdongyeon {
   position: relative;
   z-index: 0;
@@ -212,4 +206,18 @@
   position: relative;
   width: 100%;
   height: 55vh;
+}
+#passnumArr {
+  position: absolute;
+  top: 50vh;
+}
+.passnumber {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 5vw;
+  height: 5vh;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
 }

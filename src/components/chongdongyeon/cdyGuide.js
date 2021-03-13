@@ -77,6 +77,15 @@ const About = () => {
                 <span id={`hunterMent${textIdx}`} className="hunterMent">
                   {hunterment[textIdx]}
                 </span>
+                <div id="passnumArr">
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                  <div className="passnumber"></div>
+                </div>
               </div>
             </Fade>
           </Col>
